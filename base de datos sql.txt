@@ -1,6 +1,7 @@
 #--> Reprensenta una linea de comentario
 
-#Desde el CMD entramos a mysql, introducimos contraseña
+#Desde un nuevo CMD entramos a mysql con el siguiente comando, 
+nos pedirá introducir la contraseña seleccionada durante la instalacion
 mysql -u root -p
 
 #Creamos la base de datos
