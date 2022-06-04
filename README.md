@@ -40,7 +40,7 @@ La siguiente guia se enfoca en el sistema operativo windows
     
     Ejecutar el siguiente comando
     
-    `conda create -n env_dlib python=3.6`
+    `conda activate env_dlib`
     
     Para verificar que el ambiente esta activado, el cmd se debe mostrar de la siguiente manera
     
