@@ -1,8 +1,20 @@
+#--> Reprensenta una linea de comentario
+
+#Desde el CMD entramos a mysql, introducimos contraseña
 mysql -u root -p
 
+#Creamos la base de datos
 CREATE DATABASE estacionamiento;
 
+#Seleccionamos la base
 USE estacionamiento;
+
+
+
+#Creamos las tablas 
+
+#Se pueden copiar y pegar todos los comandos a la vez
+para crear las tablas
 
 CREATE TABLE users (
 user_id INT NOT NULL AUTO_INCREMENT,
@@ -47,7 +59,6 @@ FOREIGN KEY(state_id) REFERENCES states(state_id),
 UNIQUE (plate)
 );
 
-
 CREATE TABLE carsUsers(
 carReg_id INT NOT NULL AUTO_INCREMENT,
 car_id INT,
@@ -68,6 +79,12 @@ FOREIGN KEY(car_id) REFERENCES registeredCars(car_id),
 FOREIGN KEY(user_id) REFERENCES users(user_id)
 );
 
+
+
+
+#Insertamos registros
+
+#Tambien se pueden copiar y pegar los comandos para llenar las tablas
 
 INSERT INTO states (state_name) VALUES("Puebla");
 INSERT INTO states (state_name) VALUES("Tlaxcala");
@@ -97,10 +114,20 @@ INSERT INTO registeredCars(model_id,state_id,year,plate) VALUES (2,2,2007,"AW-78
 INSERT INTO carsUsers (car_id,user_id) VALUES (1,2);
 INSERT INTO carsUsers (car_id,user_id) VALUES (2,2);
 
-INSERT INTO carLog (user_id,car_id,check_time,date) VALUES (2,1,CURTIME(),CURDATE());
 
-SELECT car_id from registeredCars where plate = "SN-14-492";
+
+# Con este comando se muestran las entradas de autos, 
+ejecutar para comprobar que se registró la entrada correctamente
 
 SELECT check_time,date,CONCAT(user_surname," ",user_forename) as Name, state_name,car_name,plate from carLog INNER JOIN users INNER JOIN registeredCars INNER JOIN states INNER JOIN carModel where carLog.user_id=users.user_id and carLog.car_id=registeredCars.car_id and registeredCars.state_id = states.state_id and registeredCars.model_id = carModel.model_id;
 
+
+
+#Algunos comandos usados en el programa, no es necesario ejecutarlos
+
+SELECT car_id from registeredCars where plate = "SN-14-492";
+
 SELECT carReg_id from carsusers WHERE user_id = 1 and car_id = 2;
+
+INSERT INTO carLog (user_id,car_id,check_time,date) VALUES (2,1,CURTIME(),CURDATE());
+
