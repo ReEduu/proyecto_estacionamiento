@@ -96,7 +96,7 @@ La siguiente guia se enfoca en el sistema operativo windows
 
     Dirigirse a la siguiente página, descargar el instalador y ejecutarlo https://dev.mysql.com/downloads/installer/
     
-    Con la instalación default es suficiente, para dudas l documentación https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html
+    Con la instalación default es suficiente, para dudas consultar la documentación: https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html
     
     **Importante recordar la contraseña elegida, ya que se usa para entrar a mysql**
     
