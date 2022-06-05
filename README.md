@@ -64,7 +64,7 @@ La siguiente guia se enfoca en el sistema operativo windows
 
     Ejecutar el siguiente comando
     
-    `pip install face_recognition`
+    `pip install easyocr`
  
 2. Solucionar error con numpy
 
