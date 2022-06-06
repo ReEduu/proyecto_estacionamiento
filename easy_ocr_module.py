@@ -27,8 +27,6 @@ def reconocer_texto(image):
 	results = reader.readtext(image)
 
 	for (bbox, text, prob) in results:
-		# display the OCR'd text and associated probability
-		# unpack the bounding box
 		(tl, tr, br, bl) = bbox
 		tl = (int(tl[0]), int(tl[1]))
 		tr = (int(tr[0]), int(tr[1]))
@@ -37,17 +35,13 @@ def reconocer_texto(image):
 		text = cleanup_text(text)
 		if "-" in text:
 			palabrasDetectadas.append(text)
-		'''
-		cv2.rectangle(image, tl, br, (0, 255, 0), 2)
-		cv2.putText(image, text, (tl[0], tl[1] - 10),
-			cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 255, 0), 2)
-		'''
+
 	print(palabrasDetectadas)
 	for placa in placas:
 		for palabra in palabrasDetectadas:
 			if palabra == placa:
 				paso = True
 				placaNum = placa
-		return paso, placaNum
+	return paso, placaNum
 #cv2.imshow("Result", image)
 #cv2.waitKey(0)
