@@ -1,5 +1,5 @@
-# Proyecto vision para robots
-Proyecto de un estacionamiento manejado por visión por computadora
+# Proyecto sistema de entrada inteligente
+Proyecto de un sistema de entrada manejado por visión por computadora
 
 ### Instalación y ejecución del programa
 
